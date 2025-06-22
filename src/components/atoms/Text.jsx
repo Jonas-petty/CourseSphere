@@ -13,10 +13,10 @@ const LargeHeader = styled(DefaultText)`
 
 function Text({ text = "Text Content", type = "default" }) {
     return (
-        <div>
+        <>
             {type === "default" && <DefaultText>{text}</DefaultText>}
             {type === "large" && <LargeHeader>{text}</LargeHeader>}
-        </div>
+        </>
     );
 }
 

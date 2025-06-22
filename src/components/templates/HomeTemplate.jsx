@@ -15,7 +15,6 @@ const Container = styled.div`
 const ContentContainer = styled.div`
     min-height: 100%;
     max-width: 1444px;
-    /* border: 1px solid red; */
 `;
 
 function HomeTemplate({}) {

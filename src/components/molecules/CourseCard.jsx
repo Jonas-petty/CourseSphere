@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import Button from "../atoms/Button";
 import LinkTo from "../atoms/LinkTo";
 
 const Container = styled.div`

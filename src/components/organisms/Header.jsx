@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import Text from "../atoms/Text";
-import Button from "../atoms/Button";
+import LinkTo from "../atoms/LinkTo";
 
 const HeaderStyled = styled.header`
     background-color: var(--Neutral_0);
@@ -21,7 +21,7 @@ function Header() {
     return (
         <HeaderStyled>
             <Text />
-            <Button type="text" text="+ Criar Novo Curso"/>
+            <LinkTo to="/create-course" text="+ Criar Novo Curso" type="button"/>
         </HeaderStyled>
     );
 }
