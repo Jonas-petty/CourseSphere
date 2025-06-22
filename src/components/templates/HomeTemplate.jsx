@@ -22,6 +22,12 @@ function HomeTemplate({}) {
         <Container>
             <ContentContainer>
                 <Header className="header" />
+                <div>
+                    <h2>Seus Cursos</h2>
+                    <div className="filters">
+                        
+                    </div>
+                </div>
                 <main className="main">
                     <CourseCardList />
                 </main>

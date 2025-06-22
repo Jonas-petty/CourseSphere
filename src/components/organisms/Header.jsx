@@ -21,7 +21,7 @@ function Header() {
     return (
         <HeaderStyled>
             <Text />
-            <LinkTo to="/create-course" text="+ Criar Novo Curso" type="button"/>
+            <LinkTo to="/create/course" text="+ Criar Novo Curso" type="button"/>
         </HeaderStyled>
     );
 }
