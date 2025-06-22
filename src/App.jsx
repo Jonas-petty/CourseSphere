@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router'
 import ProtectedRoutes from './components/utils/ProtectedRoutes'
 
-import HomeTemplate from './components/templates/HomeTemplate.jsx'
+import LoginPage from './components/pages/LoginPage.jsx'
 
 
 function App() {
@@ -10,7 +10,7 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path='/login' element={<h1>Login</h1>}/>
+        <Route path='/login' element={<LoginPage />}/>
 
         <Route element={<ProtectedRoutes />}>
             <Route path='/' element={<h1>Home</h1>} />
