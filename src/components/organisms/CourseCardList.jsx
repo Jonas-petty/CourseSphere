@@ -75,6 +75,26 @@ function CourseCardList() {
             creator_id: "",
             instructors: [],
         },
+        {
+            id: 7,
+            name: "ProjectName",
+            description:
+                "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
+            start_date: "",
+            end_date: "",
+            creator_id: "",
+            instructors: [],
+        },
+        {
+            id: 8,
+            name: "ProjectName",
+            description:
+                "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
+            start_date: "",
+            end_date: "",
+            creator_id: "",
+            instructors: [],
+        },
     ];
 
     return (
@@ -83,6 +103,7 @@ function CourseCardList() {
                 return (
                     <CourseCard
                         key={course.id}
+                        id={course.id}
                         name={course.name}
                         description={course.description}
                         end_date={course.end_date}

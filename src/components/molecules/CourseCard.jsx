@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import Button from "../atoms/Button";
+import LinkTo from "../atoms/LinkTo";
 
 const Container = styled.div`
     flex: 1;
@@ -10,6 +12,7 @@ const Container = styled.div`
 `
 
 function CourseCard({
+    id,
     name = "CourseName",
     description = "Description",
     end_date,
@@ -19,6 +22,7 @@ function CourseCard({
             <h2>{name}</h2>
             <p>{description}</p>
             <p>{end_date}</p>
+            <LinkTo text="Details" to={`course/${id}`}/>
         </Container>
     );
 }

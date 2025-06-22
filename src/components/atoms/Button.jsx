@@ -17,7 +17,7 @@ const ButtonStyle = styled.button`
     }
 `;
 
-function Button({ type = "button", text = "button" }) {
+function Button({ type = "button", text = "button", onClick }) {
     return <ButtonStyle type={type}>{text}</ButtonStyle>;
 }
 
