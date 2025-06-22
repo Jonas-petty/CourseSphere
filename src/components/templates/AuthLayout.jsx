@@ -7,7 +7,14 @@ const Container = styled.div`
 `;
 
 const Content = styled.div`
-    flex: 1;
+
+    background-image: url("https://images.pexels.com/photos/1595391/pexels-photo-1595391.jpeg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: var(--Neutral_0);
+    filter: grayscale();
+
+    flex: 2;
 
     border-right: 1px solid var(--Neutral_300);
     display: flex;
@@ -31,11 +38,11 @@ const FormContainer = styled.main`
     padding: 1rem;
 `;
 
-function AuthLayout({ headerText, children }) {
+function AuthLayout({ headerText, headerType = "default", children }) {
     return (
         <Container>
             <Content>
-                <Header text={headerText} />
+                <Header text={headerText} type={headerType}/>
             </Content>
             <FormContainer>{children}</FormContainer>
         </Container>

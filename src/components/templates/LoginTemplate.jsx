@@ -22,7 +22,7 @@ const Form = styled.form`
 
 function LoginTemplate({}) {
     return (
-        <AuthLayout>
+        <AuthLayout headerText="Os Cursos que VOCE vai querer fazer!" headerType="large">
             <Form action="">
                 <Header text="Login" />
                 <LabeledInput
