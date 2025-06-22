@@ -5,6 +5,7 @@ import ProtectedRoutes from './components/utils/ProtectedRoutes'
 import LoginPage from './components/pages/LoginPage.jsx'
 import SignupPage from './components/pages/SignupPage.jsx'
 import HomePage from './components/pages/HomePage.jsx'
+import NotFoundPage from './components/pages/NotFoundPage.jsx'
 
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
       <Routes>
         <Route path='/login' element={<LoginPage />}/>
         <Route path='/signup' element={<SignupPage />}/>
+        <Route path='*' element={<NotFoundPage />}/>
 
         <Route element={<ProtectedRoutes />}>
             <Route path='/' element={<HomePage />} />
