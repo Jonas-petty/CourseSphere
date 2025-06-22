@@ -13,8 +13,7 @@ const Container = styled.div`
 function HomeTemplate({}) {
     return (
         <Container>
-            <Header className="header">
-            </Header>
+            <Header className="header" />
             <main className="main">
                 <h2>Meus Cursos</h2>
 
