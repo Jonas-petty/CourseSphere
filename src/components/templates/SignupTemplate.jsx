@@ -1,10 +1,9 @@
-import { Link } from "react-router";
-
-import AuthLayout from "./AuthLayout";
+import Header from "../atoms/Header";
 import LabeledInput from "../molecules/LabeledInput";
 import Button from "../atoms/Button";
+import AuthLayout from "./AuthLayout";
+
 import styled from "styled-components";
-import Header from "../atoms/Header";
 import LinkTo from "../atoms/LinkTo";
 
 const Form = styled.form`
@@ -20,11 +19,18 @@ const Form = styled.form`
     gap: 1rem;
 `;
 
-function LoginTemplate({}) {
+function SignupTemplate() {
     return (
         <AuthLayout>
             <Form action="">
-                <Header text="Login" />
+                <Header text="Registrar" />
+                <LabeledInput
+                    id="name"
+                    LabelText="Nome"
+                    type="text"
+                    placeholder="Nome"
+                    required={true}
+                />
                 <LabeledInput
                     id="email"
                     LabelText="Email"
@@ -41,9 +47,9 @@ function LoginTemplate({}) {
                 />
                 <Button type="submit" />
             </Form>
-            <LinkTo to={"/signup"} text="Registrar" />
+            <LinkTo to="/login" text="Login" />
         </AuthLayout>
     );
 }
 
-export default LoginTemplate;
+export default SignupTemplate;

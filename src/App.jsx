@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from 'react-router'
 import ProtectedRoutes from './components/utils/ProtectedRoutes'
 
 import LoginPage from './components/pages/LoginPage.jsx'
+import SignupPage from './components/pages/SignupPage.jsx'
 
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path='/login' element={<LoginPage />}/>
+        <Route path='/signup' element={<SignupPage />}/>
 
         <Route element={<ProtectedRoutes />}>
             <Route path='/' element={<h1>Home</h1>} />

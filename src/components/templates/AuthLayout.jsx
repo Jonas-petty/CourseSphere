@@ -25,6 +25,7 @@ const FormContainer = styled.main`
     background: var(--Light_Gradient);
 
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     padding: 1rem;
