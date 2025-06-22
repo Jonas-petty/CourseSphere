@@ -1,4 +1,4 @@
-import Header from "../atoms/Header";
+import Header from "../atoms/Text";
 import LabeledInput from "../molecules/LabeledInput";
 import Button from "../atoms/Button";
 import AuthLayout from "./AuthLayout";

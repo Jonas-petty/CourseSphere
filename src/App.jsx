@@ -4,6 +4,7 @@ import ProtectedRoutes from './components/utils/ProtectedRoutes'
 
 import LoginPage from './components/pages/LoginPage.jsx'
 import SignupPage from './components/pages/SignupPage.jsx'
+import HomePage from './components/pages/HomePage.jsx'
 
 
 function App() {
@@ -15,7 +16,7 @@ function App() {
         <Route path='/signup' element={<SignupPage />}/>
 
         <Route element={<ProtectedRoutes />}>
-            <Route path='/' element={<h1>Home</h1>} />
+            <Route path='/' element={<HomePage />} />
             <Route path='/courses' element={<h1>Courses</h1>} />
         </Route>
       </Routes>

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import Header from "../atoms/Header";
+import Header from "../atoms/Text";
 
 const Container = styled.div`
     height: 100vh;
@@ -7,7 +7,6 @@ const Container = styled.div`
 `;
 
 const Content = styled.div`
-
     background-image: url("https://images.pexels.com/photos/1595391/pexels-photo-1595391.jpeg");
     background-repeat: no-repeat;
     background-position: center;
@@ -42,7 +41,7 @@ function AuthLayout({ headerText, headerType = "default", children }) {
     return (
         <Container>
             <Content>
-                <Header text={headerText} type={headerType}/>
+                <Header text={headerText} type={headerType} />
             </Content>
             <FormContainer>{children}</FormContainer>
         </Container>

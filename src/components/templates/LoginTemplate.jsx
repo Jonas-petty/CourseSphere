@@ -4,7 +4,7 @@ import AuthLayout from "./AuthLayout";
 import LabeledInput from "../molecules/LabeledInput";
 import Button from "../atoms/Button";
 import styled from "styled-components";
-import Header from "../atoms/Header";
+import Header from "../atoms/Text";
 import LinkTo from "../atoms/LinkTo";
 
 const Form = styled.form`
@@ -22,7 +22,10 @@ const Form = styled.form`
 
 function LoginTemplate({}) {
     return (
-        <AuthLayout headerText="Os Cursos que VOCE vai querer fazer!" headerType="large">
+        <AuthLayout
+            headerText="Os Cursos que VOCE vai querer fazer!"
+            headerType="large"
+        >
             <Form action="">
                 <Header text="Login" />
                 <LabeledInput
