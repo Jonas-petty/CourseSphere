@@ -18,6 +18,7 @@ const InputStyle = styled.input`
 
 function Input({
     id,
+    className = "",
     type = "text",
     value,
     onChange,
@@ -27,6 +28,7 @@ function Input({
     return (
         <InputStyle
             id={id}
+            className={className}
             type={type}
             value={value}
             onChange={(event) => onChange(event.target.value)}

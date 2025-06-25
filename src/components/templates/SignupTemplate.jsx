@@ -56,9 +56,9 @@ function SignupTemplate({newUser, setNewUser, handleSubmit}) {
                     onChange={(value) => handleChange("password", value)}
                     required={true}
                 />
-                <Button type="submit" />
+                <Button type="submit" text="Confirmar"/>
             </Form>
-            <LinkTo to="/login" text="Login" />
+            <LinkTo to="/login" text="Entrar" />
         </AuthLayout>
     );
 }

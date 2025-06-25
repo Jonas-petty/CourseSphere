@@ -20,7 +20,7 @@ function App() {
         <Route path='*' element={<NotFoundPage />}/>
 
         <Route element={<ProtectedRoutes />}>
-            <Route path='/' element={<HomePage />} />
+            <Route path='/' index element={<HomePage />} />
             <Route path='/course/:courseId' element={<CourseDetailsPage />} />
             <Route path='create/course' element={<CreateCoursePage />}/>
         </Route>

@@ -3,6 +3,7 @@ import Input from "../atoms/Input";
 
 function LabeledInput({
     id,
+    className,
     LabelText = "Label",
     type = "text",
     placeholder = "placeholder",
@@ -15,6 +16,7 @@ function LabeledInput({
             <Label htmlFor={id} text={LabelText} />
             <Input
                 id={id}
+                className={className}
                 type={type}
                 value={value}
                 onChange={onChange}

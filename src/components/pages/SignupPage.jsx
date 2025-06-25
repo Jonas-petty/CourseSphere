@@ -16,15 +16,11 @@ function SignupPage() {
         .then((response) => response.json())
         .then((data) => {
             setNewUser((prev) => ({...prev, "id": data.id}))
-            localStorage.setItem("active-user", newUser)
+            localStorage.setItem("active-user", JSON.stringify(newUser))
         })
         .catch((err) => console.log(`error: ${err}`))
 
     }
-
-    useRef(() => {
-        console.log(newUser)
-    }, [newUser])
 
     return ( <SignupTemplate newUser={newUser} setNewUser={setNewUser} handleSubmit={handleSubmit} /> );
 }

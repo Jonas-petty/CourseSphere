@@ -1,5 +1,3 @@
-import { Link } from "react-router";
-
 import AuthLayout from "./AuthLayout";
 import LabeledInput from "../molecules/LabeledInput";
 import Button from "../atoms/Button";
@@ -20,19 +18,26 @@ const Form = styled.form`
     gap: 1rem;
 `;
 
-function LoginTemplate({}) {
+function LoginTemplate({user, setUser, handleSubmit, foundUser}) {
+
+    function handleChange(field, value) {
+        setUser((prev) => ({...prev, [field]: value}))
+    }
+
     return (
         <AuthLayout
-            headerText="Os Cursos que VOCE vai querer fazer!"
+            headerText="Os Cursos que VOCÊ vai querer fazer!"
             headerType="large"
         >
-            <Form action="">
-                <Header text="Login" />
+            <Form action={handleSubmit}>
+                <Header text="Entrar" />
                 <LabeledInput
                     id="email"
                     LabelText="Email"
                     type="email"
                     placeholder="email@example.com"
+                    value={user.email}
+                    onChange={(value) => handleChange("email", value)}
                     required={true}
                 />
                 <LabeledInput
@@ -40,9 +45,12 @@ function LoginTemplate({}) {
                     LabelText="Senha"
                     type="password"
                     placeholder="Senha"
+                    value={user.password}
+                    onChange={(value) => handleChange("password", value)}
                     required={true}
                 />
-                <Button type="submit" />
+                {!foundUser && <span>Usuário não encontrado, tente novamente!</span>}
+                <Button type="submit" text="Confirmar"/>
             </Form>
             <LinkTo to={"/signup"} text="Registrar" />
         </AuthLayout>
