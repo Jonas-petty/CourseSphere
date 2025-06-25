@@ -3,6 +3,7 @@ import Text from "../atoms/Text";
 import LabeledInput from "../molecules/LabeledInput";
 import Button from "../atoms/Button";
 import LabeledTextarea from "../molecules/LabeledTextarea";
+import DateRange from "../molecules/DateRange";
 const Container = styled.div`
     background: var(--Light_Gradient);
     height: 100vh;
@@ -11,7 +12,6 @@ const Container = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
 `;
 
 const Form = styled.form`
@@ -23,30 +23,39 @@ const Form = styled.form`
     flex-direction: column;
     gap: 1rem;
 
-    @media (min-width: 576px){
-    	width: 500px;
+    @media (min-width: 576px) {
+        width: 500px;
     }
 `;
 
-function CreateCourseTemplate({ isNewCourse, createdCourse, setCreatedCourse }) {
-
+function CreateCourseTemplate({
+    isNewCourse,
+    createdCourse,
+    setCreatedCourse,
+}) {
     function handleChange(field, value) {
-        setCreatedCourse((prev) => ({...prev, [field]: value}))
+        setCreatedCourse((prev) => ({ ...prev, [field]: value }));
+    }
+
+    function handleSubmit(event) {
+        console.log(createdCourse)
     }
 
     return (
         <Container>
-            <Form>
+            <Form action={handleSubmit}>
                 <Text text="CourseSphere" />
                 <hr />
-                <Text type="medium" text="Criar Novo Curso" />
+                <Text type="medium" text="Criar Curso" />
                 <LabeledInput
                     id="name"
                     LabelText="Nome"
                     type="text"
                     placeholder="Nome"
                     value={createdCourse.name}
-                    onChange={(value) => {handleChange("name", value)}}
+                    onChange={(value) => {
+                        handleChange("name", value);
+                    }}
                     minLength={3}
                     required={true}
                 />
@@ -55,11 +64,23 @@ function CreateCourseTemplate({ isNewCourse, createdCourse, setCreatedCourse }) 
                     labelText="Descrição"
                     placeholder="Descrição"
                     value={createdCourse.description}
-                    onChange={(value) => {handleChange("description", value)}}
+                    onChange={(value) => {
+                        handleChange("description", value);
+                    }}
                     maxLength={500}
                 />
-                <input type="date" name="" id="" />
-                <input type="date" name="" id="" />
+                <DateRange
+                    startId="start_date"
+                    startLabel="Inicio"
+                    startValue={createdCourse.start_date}
+                    startOnChange={(value) => handleChange("start_date", value)}
+                    startRequired={true}
+                    endId="end_date"
+                    endLabel="Fim"
+                    endValue={createdCourse.end_date}
+                    endOnChange={(value) => handleChange("end_date", value)}
+                    endRequired={true}
+                />
                 <select>
                     <option value="teste">Teste</option>
                 </select>
