@@ -1,5 +1,8 @@
+import styled from "styled-components";
 import Label from "../atoms/Label";
 import Input from "../atoms/Input";
+
+const Container = styled.div``;
 
 function LabeledInput({
     id,
@@ -9,10 +12,11 @@ function LabeledInput({
     placeholder = "placeholder",
     value,
     onChange,
+    minLength,
     required = true,
 }) {
     return (
-        <div className="container">
+        <Container>
             <Label htmlFor={id} text={LabelText} />
             <Input
                 id={id}
@@ -21,9 +25,10 @@ function LabeledInput({
                 value={value}
                 onChange={onChange}
                 placeholder={placeholder}
+                minLength={minLength}
                 required={required}
             />
-        </div>
+        </Container>
     );
 }
 

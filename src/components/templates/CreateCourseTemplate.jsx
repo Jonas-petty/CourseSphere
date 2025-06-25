@@ -2,6 +2,7 @@ import styled from "styled-components";
 import Text from "../atoms/Text";
 import LabeledInput from "../molecules/LabeledInput";
 import Button from "../atoms/Button";
+import LabeledTextarea from "../molecules/LabeledTextarea";
 const Container = styled.div`
     background: var(--Light_Gradient);
     height: 100vh;
@@ -15,7 +16,7 @@ const Form = styled.form`
     background-color: var(--Neutral_0);
 
     border: 1px solid var(--Neutral_200);
-    border-radius: .5rem;
+    border-radius: 0.5rem;
     padding: 1rem;
     width: 500px;
     display: flex;
@@ -23,26 +24,42 @@ const Form = styled.form`
     gap: 1rem;
 `;
 
-function CreateCourseTemplate() {
+function CreateCourseTemplate({ isNewCourse, createdCourse, setCreatedCourse }) {
+
+    function handleChange(field, value) {
+        setCreatedCourse((prev) => ({...prev, [field]: value}))
+    }
+
     return (
         <Container>
-            <h1>CourseSphere</h1>
             <Form>
+                <Text text="CourseSphere" />
+                <hr />
                 <Text type="medium" text="Criar Novo Curso" />
                 <LabeledInput
                     id="name"
                     LabelText="Nome"
                     type="text"
                     placeholder="Nome"
+                    value={createdCourse.name}
+                    onChange={(value) => {handleChange("name", value)}}
+                    minLength={3}
                     required={true}
                 />
-                <textarea name="description" id="description"></textarea>
+                <LabeledTextarea
+                    id="description"
+                    labelText="Descrição"
+                    placeholder="Descrição"
+                    value={createdCourse.description}
+                    onChange={(value) => {handleChange("description", value)}}
+                    maxLength={500}
+                />
                 <input type="date" name="" id="" />
                 <input type="date" name="" id="" />
                 <select>
                     <option value="teste">Teste</option>
                 </select>
-                <Button type="submit" />
+                <Button type="submit" text="Confirmar" />
             </Form>
         </Container>
     );

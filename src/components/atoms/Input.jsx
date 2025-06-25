@@ -23,6 +23,7 @@ function Input({
     value,
     onChange,
     placeholder = "placeholder",
+    minLength,
     required = "true",
 }) {
     return (
@@ -33,7 +34,9 @@ function Input({
             value={value}
             onChange={(event) => onChange(event.target.value)}
             placeholder={placeholder}
+            minLength={minLength}
             required={required}
+            
         />
     );
 }
