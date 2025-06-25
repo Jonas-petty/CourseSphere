@@ -2,7 +2,7 @@ import { useState } from "react";
 import LoginTemplate from "../templates/LoginTemplate";
 import { Navigate, redirect, useNavigate } from "react-router";
 
-function LoginPage() {
+function LoginPage({setIsLogged}) {
     
     let navigate = useNavigate()
     const [foundUser, setFoundUser] = useState(true)
@@ -15,7 +15,7 @@ function LoginPage() {
 
     async function getUser(user) {
         let result = null
-        await fetch(`http://localhost:3000/users?email=${user.email}&password=${user.password}`)
+        await fetch(`http://localhost:3000/users?email=${user.email}&password=${user.password}`, {method: "GET"})
         .then((response) => response.json())
         .then((data) => {
             if (data.length !== 0) result = data[0]
@@ -34,6 +34,7 @@ function LoginPage() {
             .then(result => {
                 if (result) {
                     localStorage.setItem("active-user", JSON.stringify(result))
+                    setIsLogged(true)
                     navigate("/")
                 } else {
                     setFoundUser(False)

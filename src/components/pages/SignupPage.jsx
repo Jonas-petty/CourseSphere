@@ -1,7 +1,7 @@
 import { useRef, useState } from "react";
 import SignupTemplate from "../templates/SignupTemplate"
 
-function SignupPage() {
+function SignupPage({setIsLogged}) {
 
     const [newUser, setNewUser] = useState(
         {

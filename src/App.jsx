@@ -12,14 +12,16 @@ import CreateCoursePage from './components/pages/CreateCoursePage.jsx'
 
 function App() {
 
+  const [isLogged, setIsLogged] = useState(false)
+
   return (
     <BrowserRouter>
       <Routes>
-        <Route path='/login' element={<LoginPage />}/>
-        <Route path='/signup' element={<SignupPage />}/>
+        <Route path='/login' element={<LoginPage setIsLogged={setIsLogged}/>}/>
+        <Route path='/signup' element={<SignupPage setIsLogged={setIsLogged}/>}/>
         <Route path='*' element={<NotFoundPage />}/>
 
-        <Route element={<ProtectedRoutes />}>
+        <Route element={<ProtectedRoutes isLogged={isLogged}/>}>
             <Route path='/' index element={<HomePage />} />
             <Route path='/course/:courseId' element={<CourseDetailsPage />} />
             <Route path='create/course' element={<CreateCoursePage />}/>
