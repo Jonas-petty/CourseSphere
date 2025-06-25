@@ -1,12 +1,12 @@
 {
-  "users": [
-    {
-      "id": "4568",
-      "name": "teste",
-      "email": "teste@gmail.com",
-      "password": "123456"
-    }
-  ],
-  "courses": [],
-  "lessons": []
+    "users": [
+        {
+            "id": "4568",
+            "name": "teste",
+            "email": "teste@gmail.com",
+            "password": "123456"
+        }
+    ],
+    "courses": [],
+    "lessons": []
 }

@@ -38,15 +38,20 @@ function CreateCourseTemplate({
 }) {
     function handleChange(field, value) {
         if (field == "instructors") {
-            value = value.map((instructor) => ({ name: instructor.value }));
+            value = value.map((instructor) => instructor.value);
         }
 
         setCreatedCourse((prev) => ({ ...prev, [field]: value }));
     }
 
     function handleSubmit(event) {
-        const currentUser = JSON.parse(localStorage.getItem("active-user"))
+        const currentUser = JSON.parse(localStorage.getItem("active-user"));
         setCreatedCourse((prev) => ({ ...prev, creator_id: currentUser.id }));
+
+        fetch("http://localhost:3000/courses", {
+            method: "POST",
+            body: JSON.stringify(createdCourse),
+        }).catch((err) => console.error(`Error: ${err}`));
     }
 
     return (
