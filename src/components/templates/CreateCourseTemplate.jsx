@@ -5,6 +5,7 @@ import Button from "../atoms/Button";
 import LabeledTextarea from "../molecules/LabeledTextarea";
 import DateRange from "../molecules/DateRange";
 import DropDown from "../atoms/DropDown";
+import { useNavigate } from "react-router";
 
 const Container = styled.div`
     background: var(--Light_Gradient);
@@ -36,6 +37,8 @@ function CreateCourseTemplate({
     setCreatedCourse,
     options,
 }) {
+    const navigate = useNavigate()
+
     function handleChange(field, value) {
         if (field == "instructors") {
             value = value.map((instructor) => instructor.value);
@@ -51,7 +54,8 @@ function CreateCourseTemplate({
         fetch("http://localhost:3000/courses", {
             method: "POST",
             body: JSON.stringify(createdCourse),
-        }).catch((err) => console.error(`Error: ${err}`));
+        }).then(() => navigate("/"))
+        .catch((err) => console.error(`Error: ${err}`));
     }
 
     return (
