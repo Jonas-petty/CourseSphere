@@ -6,6 +6,8 @@ function LabeledInput({
     LabelText = "Label",
     type = "text",
     placeholder = "placeholder",
+    value,
+    onChange,
     required = true,
 }) {
     return (
@@ -14,6 +16,8 @@ function LabeledInput({
             <Input
                 id={id}
                 type={type}
+                value={value}
+                onChange={onChange}
                 placeholder={placeholder}
                 required={required}
             />

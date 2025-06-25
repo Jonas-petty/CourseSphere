@@ -19,6 +19,8 @@ const InputStyle = styled.input`
 function Input({
     id,
     type = "text",
+    value,
+    onChange,
     placeholder = "placeholder",
     required = "true",
 }) {
@@ -26,6 +28,8 @@ function Input({
         <InputStyle
             id={id}
             type={type}
+            value={value}
+            onChange={(event) => onChange(event.target.value)}
             placeholder={placeholder}
             required={required}
         />

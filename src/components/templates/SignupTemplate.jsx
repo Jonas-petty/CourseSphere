@@ -19,16 +19,23 @@ const Form = styled.form`
     gap: 1rem;
 `;
 
-function SignupTemplate() {
+function SignupTemplate({newUser, setNewUser, handleSubmit}) {
+
+    function handleChange(field, value) {
+        setNewUser((prev) => ({...prev, [field]: value}))
+    }
+
     return (
         <AuthLayout>
-            <Form action="">
+            <Form action={handleSubmit}>
                 <Header text="Registrar" />
                 <LabeledInput
                     id="name"
                     LabelText="Nome"
                     type="text"
                     placeholder="Nome"
+                    value={newUser.name}
+                    onChange={(value) => handleChange("name", value)}
                     required={true}
                 />
                 <LabeledInput
@@ -36,6 +43,8 @@ function SignupTemplate() {
                     LabelText="Email"
                     type="email"
                     placeholder="email@example.com"
+                    value={newUser.email}
+                    onChange={(value) => handleChange("email", value)}
                     required={true}
                 />
                 <LabeledInput
@@ -43,6 +52,8 @@ function SignupTemplate() {
                     LabelText="Senha"
                     type="password"
                     placeholder="Senha"
+                    value={newUser.pasword}
+                    onChange={(value) => handleChange("password", value)}
                     required={true}
                 />
                 <Button type="submit" />
