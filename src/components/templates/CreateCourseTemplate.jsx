@@ -6,22 +6,26 @@ import LabeledTextarea from "../molecules/LabeledTextarea";
 const Container = styled.div`
     background: var(--Light_Gradient);
     height: 100vh;
+    padding: 1rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
 `;
 
 const Form = styled.form`
     background-color: var(--Neutral_0);
-
     border: 1px solid var(--Neutral_200);
-    border-radius: 0.5rem;
+    width: 100%;
     padding: 1rem;
-    width: 500px;
     display: flex;
     flex-direction: column;
     gap: 1rem;
+
+    @media (min-width: 576px){
+    	width: 500px;
+    }
 `;
 
 function CreateCourseTemplate({ isNewCourse, createdCourse, setCreatedCourse }) {
