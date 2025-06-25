@@ -4,6 +4,8 @@ import LabeledInput from "../molecules/LabeledInput";
 import Button from "../atoms/Button";
 import LabeledTextarea from "../molecules/LabeledTextarea";
 import DateRange from "../molecules/DateRange";
+import DropDown from "../atoms/DropDown";
+
 const Container = styled.div`
     background: var(--Light_Gradient);
     height: 100vh;
@@ -32,13 +34,19 @@ function CreateCourseTemplate({
     isNewCourse,
     createdCourse,
     setCreatedCourse,
+    options,
 }) {
     function handleChange(field, value) {
+        if (field == "instructors") {
+            value = value.map((instructor) => ({ name: instructor.value }));
+        }
+
         setCreatedCourse((prev) => ({ ...prev, [field]: value }));
     }
 
     function handleSubmit(event) {
-        console.log(createdCourse)
+        const currentUser = JSON.parse(localStorage.getItem("active-user"))
+        setCreatedCourse((prev) => ({ ...prev, creator_id: currentUser.id }));
     }
 
     return (
@@ -81,9 +89,13 @@ function CreateCourseTemplate({
                     endOnChange={(value) => handleChange("end_date", value)}
                     endRequired={true}
                 />
-                <select>
-                    <option value="teste">Teste</option>
-                </select>
+                <DropDown
+                    id="instructors"
+                    isMulti={true}
+                    options={options}
+                    onChange={(value) => handleChange("instructors", value)}
+                    required={false}
+                />
                 <Button type="submit" text="Confirmar" />
             </Form>
         </Container>
