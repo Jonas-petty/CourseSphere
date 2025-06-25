@@ -1,6 +1,6 @@
 import { useState } from "react";
 import LoginTemplate from "../templates/LoginTemplate";
-import { Navigate, redirect, useNavigate } from "react-router";
+import { useNavigate } from "react-router";
 
 function LoginPage({setIsLogged}) {
     
@@ -28,6 +28,7 @@ function LoginPage({setIsLogged}) {
         const  activeUser = JSON.parse(localStorage.getItem("active-user"))
         
         if (activeUser && (activeUser.email === user.email && activeUser.password === user.password)) {
+            setIsLogged(true)
             navigate("/")
         } else{
             getUser(user)
@@ -35,7 +36,7 @@ function LoginPage({setIsLogged}) {
                 if (result) {
                     localStorage.setItem("active-user", JSON.stringify(result))
                     setIsLogged(true)
-                    navigate("/")
+                    navigate("/")   
                 } else {
                     setFoundUser(False)
                 }
