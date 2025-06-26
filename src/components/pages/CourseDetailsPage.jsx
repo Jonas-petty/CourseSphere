@@ -16,7 +16,6 @@ function CourseDetailsPage() {
                 fetch(`http://localhost:3000/lessons?course_id=${courseId}`)
                     .then((response) => response.json())
                     .then((data) => {
-                        console.log(data)
                         setLessons(data);
                     });
             });

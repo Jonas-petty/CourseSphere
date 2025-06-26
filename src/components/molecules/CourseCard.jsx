@@ -20,6 +20,13 @@ const CourseHeader = styled.div`
     justify-content: space-between;
 `;
 
+const ContentContainer = styled.div`
+    background-color: var(--Neutral_200);
+    border-radius: 0.5rem;
+    margin: 1rem 0;
+    padding: 1rem;
+`;
+
 function CourseCard({
     id,
     name = "CourseName",
@@ -31,14 +38,16 @@ function CourseCard({
         <Container>
             <CourseHeader>
                 <Text type="medium" text={name} />
-                <LinkTo text="Editar" to={`course/${id}/edit`}/>
+                <LinkTo text="Editar" to={`course/${id}/edit`} />
             </CourseHeader>
-
-            <p>{description}</p>
-            <p>
-                {start_date} - {end_date}
-            </p>
-            <LinkTo text="Details" to={`course/${id}`} />
+            <ContentContainer>
+                <p>{description}</p>
+                <p>
+                    {new Date(start_date).toLocaleDateString("pt-BR")} -{" "}
+                    {new Date(end_date).toLocaleDateString("pt-BR")}
+                </p>
+            </ContentContainer>
+            <LinkTo type="alt-button" text="Detalhes" to={`course/${id}`} />
         </Container>
     );
 }

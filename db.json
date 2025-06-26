@@ -86,6 +86,42 @@
       "video_url": "https://www.youtube.com/watch?v=66mfBcJXBfo",
       "course_id": "88d3",
       "creator_id": "4568"
+    },
+    {
+      "id": "509f",
+      "title": "Dedilhado no Violao",
+      "status": "archived",
+      "publish_date": "2025-06-30",
+      "video_url": "https://www.youtube.com/watch?v=kESCYLMFGbo",
+      "course_id": "f53a",
+      "creator_id": "4568"
+    },
+    {
+      "id": "7dda",
+      "title": "Shallow Now",
+      "status": "published",
+      "publish_date": "2025-08-20",
+      "video_url": "https://www.youtube.com/watch?v=1eEbm3mWVMg&list=PL_TqAU4yPHO5eXLOOARk8z_zK0D3FVe_a",
+      "course_id": "f53a",
+      "creator_id": "4568"
+    },
+    {
+      "id": "2f99",
+      "title": "Verbos do ingles",
+      "status": "published",
+      "publish_date": "2025-06-30",
+      "video_url": "https://www.youtube.com/watch?v=sCiG6rlk2Bc",
+      "course_id": "2509",
+      "creator_id": "4568"
+    },
+    {
+      "id": "f08b",
+      "title": "Past Tense in english",
+      "status": "draft",
+      "publish_date": "2025-07-03",
+      "video_url": "https://www.youtube.com/watch?v=12vvBvr1ouc",
+      "course_id": "2509",
+      "creator_id": "4568"
     }
   ]
 }

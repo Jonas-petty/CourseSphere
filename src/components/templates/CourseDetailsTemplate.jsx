@@ -8,8 +8,10 @@ const Container = styled.div`
     background: var(--Light_Gradient);
     padding: 1rem;
     display: flex;
-    align-items: center;
     justify-content: center;
+    
+
+    
 `;
 
 const ContentContainer = styled.div`
@@ -18,8 +20,9 @@ const ContentContainer = styled.div`
     padding: 1rem;
     border: 1px solid var(--Neutral_200);
     border-radius: 0.25rem;
-
-    width: 500px;
+    width: 1024px;
+    overflow-y: auto;
+    overflow-x: hidden;
 `;
 
 const Description = styled.div`
