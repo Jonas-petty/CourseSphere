@@ -76,6 +76,9 @@ function CourseDetailsTemplate({
     return (
         <Container>
             <ContentContainer>
+                <div style={{padding: "1rem", marginLeft: "auto", textAlign: "left"}}>
+                    <LinkTo type="button" text="< Voltar" to="/"/>
+                </div>
                 <Text text={name} />
                 <Description>
                     <p>{description}</p>

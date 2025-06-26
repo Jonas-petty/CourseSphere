@@ -14,7 +14,7 @@ import CreateLessonPage from './components/pages/CreateLessonPage.jsx'
 
 function App() {
 
-  const [isLogged, setIsLogged] = useState(false)
+  const [isLogged, setIsLogged] = useState(true)
 
   return (
     <BrowserRouter>

@@ -40,7 +40,7 @@ function LoginPage({ setIsLogged }) {
                     setIsLogged(true);
                     navigate("/");
                 } else {
-                    setFoundUser(False);
+                    setFoundUser(false);
                 }
             });
         }

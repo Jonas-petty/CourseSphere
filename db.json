@@ -54,6 +54,36 @@
         "Quênia Castro",
         "Nelson Gomes"
       ]
+    },
+    {
+      "id": "ea91",
+      "name": "Aulas de Programacao",
+      "description": "Aulas para aprendizado de codigo, duracao curta.",
+      "start_date": "2025-07-05",
+      "end_date": "2025-07-28",
+      "creator_id": "",
+      "instructors": [
+        "Zarco  Sales",
+        "Jardel Duarte",
+        "Igor Gomes",
+        "Cílio Duarte"
+      ]
+    },
+    {
+      "id": "4608",
+      "name": "Desenvolvimento de Games",
+      "description": "Desenvolvimento de Games para iniciantes usando a linguagem Java.",
+      "start_date": "2025-07-12",
+      "end_date": "2025-07-23",
+      "creator_id": "",
+      "instructors": [
+        "Gleisy Pinto",
+        "Édipo da Mata",
+        "Carolina Aragão",
+        "Teodomiro Gomes",
+        "Aldónio Rezende",
+        "Silviane Nogueira"
+      ]
     }
   ],
   "lessons": [
@@ -127,6 +157,60 @@
       "publish_date": "2025-07-03",
       "video_url": "https://www.youtube.com/watch?v=12vvBvr1ouc",
       "course_id": "2509",
+      "creator_id": "4568"
+    },
+    {
+      "id": "16db",
+      "title": "Programacao Orientada a Objetos",
+      "status": "published",
+      "publish_date": "2025-06-27",
+      "video_url": "https://www.youtube.com/watch?v=QY0Kdg83orY",
+      "course_id": "ea91",
+      "creator_id": "4568"
+    },
+    {
+      "id": "24d7",
+      "title": "Aprenda a desenvolver com React",
+      "status": "draft",
+      "publish_date": "2025-06-30",
+      "video_url": "https://www.youtube.com/watch?v=aJR7f45dBNs",
+      "course_id": "ea91",
+      "creator_id": "4568"
+    },
+    {
+      "id": "6641",
+      "title": "Spring Boot Back-End",
+      "status": "archived",
+      "publish_date": "2025-07-12",
+      "video_url": "https://www.youtube.com/watch?v=nKE8pqvhrs8",
+      "course_id": "ea91",
+      "creator_id": "4568"
+    },
+    {
+      "id": "9c2e",
+      "title": "API Rest com Nodejs",
+      "status": "published",
+      "publish_date": "2025-07-12",
+      "video_url": "https://www.youtube.com/watch?v=-MTSQjw5DrM",
+      "course_id": "ea91",
+      "creator_id": "4568"
+    },
+    {
+      "id": "4e4d",
+      "title": "Dicas para iniciantes",
+      "status": "archived",
+      "publish_date": "2025-07-11",
+      "video_url": "https://www.youtube.com/watch?v=H_5u_DVTbbU",
+      "course_id": "4608",
+      "creator_id": "4568"
+    },
+    {
+      "id": "8764",
+      "title": "Arte dos Games",
+      "status": "draft",
+      "publish_date": "2025-07-12",
+      "video_url": "https://www.youtube.com/watch?v=gTZT8GE5928",
+      "course_id": "4608",
       "creator_id": "4568"
     }
   ]
