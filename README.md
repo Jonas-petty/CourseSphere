@@ -11,14 +11,10 @@
 
 > **Atenção!** O deploy ainda não esta com o mock back-end (json-server) no ar, irei adicionar o mais rápido possível. Sinta-se a vontade para verificar o sistemas localmente no meio tempo.
 
-<div style="height: 400px; display:flex; overflow-x: auto; overflow-y: hidden;">
-    <img src="./src/assets/Screenshot_2025-06-26_19-18-22.png">
-    <img src="./src/assets/Screenshot_2025-06-26_19-20-01.png">
-    <img src="./src/assets/Screenshot_2025-06-26_19-18-54.png">
-    <img src="./src/assets/Screenshot_2025-06-26_19-20-29.png">
-    <img src="./src/assets/Screenshot_2025-06-26_19-19-26.png">  
-    <img src="./src/assets/Screenshot_2025-06-26_19-21-04.png">
-</div>
+|                                                             |                                                             |                                                             |
+| ----------------------------------------------------------- | ----------------------------------------------------------- | ----------------------------------------------------------- |
+| <img src="./src/assets/Screenshot_2025-06-26_19-18-22.png"> | <img src="./src/assets/Screenshot_2025-06-26_19-18-54.png"> | <img src="./src/assets/Screenshot_2025-06-26_19-19-26.png"> |
+| <img src="./src/assets/Screenshot_2025-06-26_19-20-01.png"> | <img src="./src/assets/Screenshot_2025-06-26_19-20-29.png"> | <img src="./src/assets/Screenshot_2025-06-26_19-21-04.png"> |
 
 ## Índice
 
