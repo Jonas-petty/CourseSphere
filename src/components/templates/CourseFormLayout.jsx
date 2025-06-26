@@ -31,29 +31,28 @@ const Form = styled.form`
     }
 `;
 
-function CreateCourseTemplate({
-    isNewCourse,
-    createdCourse,
-    setCreatedCourse,
-    options,
-}) {
+function CourseFormLayout({ isNewCourse = true, course, setCourse, options }) {
     const navigate = useNavigate();
+
+    const selectedOptions = options.filter((opt) =>
+        course.instructors.includes(opt.value)
+    );
 
     function handleChange(field, value) {
         if (field == "instructors") {
             value = value.map((instructor) => instructor.value);
         }
 
-        setCreatedCourse((prev) => ({ ...prev, [field]: value }));
+        setCourse((prev) => ({ ...prev, [field]: value }));
     }
 
     function handleSubmit(event) {
         const currentUser = JSON.parse(localStorage.getItem("active-user"));
-        setCreatedCourse((prev) => ({ ...prev, creator_id: currentUser.id }));
+        setCourse((prev) => ({ ...prev, creator_id: currentUser.id }));
 
-        fetch("http://localhost:3000/courses", {
-            method: "POST",
-            body: JSON.stringify(createdCourse),
+        fetch(`http://localhost:3000/courses/${isNewCourse ? "" : course.id}`, {
+            method: isNewCourse ? "POST" : "PATCH",
+            body: JSON.stringify(course),
         })
             .then(() => navigate("/"))
             .catch((err) => console.error(`Error: ${err}`));
@@ -70,7 +69,7 @@ function CreateCourseTemplate({
                     LabelText="Nome"
                     type="text"
                     placeholder="Nome"
-                    value={createdCourse.name}
+                    value={course.name}
                     onChange={(value) => {
                         handleChange("name", value);
                     }}
@@ -81,7 +80,7 @@ function CreateCourseTemplate({
                     id="description"
                     labelText="Descrição"
                     placeholder="Descrição"
-                    value={createdCourse.description}
+                    value={course.description}
                     onChange={(value) => {
                         handleChange("description", value);
                     }}
@@ -90,12 +89,12 @@ function CreateCourseTemplate({
                 <DateRange
                     startId="start_date"
                     startLabel="Inicio"
-                    startValue={createdCourse.start_date}
+                    startValue={course.start_date}
                     startOnChange={(value) => handleChange("start_date", value)}
                     startRequired={true}
                     endId="end_date"
                     endLabel="Fim"
-                    endValue={createdCourse.end_date}
+                    endValue={course.end_date}
                     endOnChange={(value) => handleChange("end_date", value)}
                     endRequired={true}
                 />
@@ -103,6 +102,7 @@ function CreateCourseTemplate({
                     id="instructors"
                     isMulti={true}
                     options={options}
+                    value={selectedOptions}
                     onChange={(value) => handleChange("instructors", value)}
                     required={false}
                 />
@@ -112,4 +112,4 @@ function CreateCourseTemplate({
     );
 }
 
-export default CreateCourseTemplate;
+export default CourseFormLayout;

@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import LinkTo from "../atoms/LinkTo";
+import Text from "../atoms/Text";
 
 const Container = styled.div`
     flex: 1;
@@ -8,20 +9,36 @@ const Container = styled.div`
     border-radius: 0.5rem;
     border: 1px solid var(--Neutral_200);
 
-`
+    @media (min-width: 768px) {
+        flex: 1;
+    }
+`;
+
+const CourseHeader = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+`;
 
 function CourseCard({
     id,
     name = "CourseName",
     description = "Description",
+    start_date,
     end_date,
 }) {
     return (
         <Container>
-            <h2>{name}</h2>
+            <CourseHeader>
+                <Text type="medium" text={name} />
+                <LinkTo text="Editar" to={`course/${id}/edit`}/>
+            </CourseHeader>
+
             <p>{description}</p>
-            <p>{end_date}</p>
-            <LinkTo text="Details" to={`course/${id}`}/>
+            <p>
+                {start_date} - {end_date}
+            </p>
+            <LinkTo text="Details" to={`course/${id}`} />
         </Container>
     );
 }

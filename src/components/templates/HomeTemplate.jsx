@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import Header from "../organisms/Header";
 import CourseCardList from "../organisms/CourseCardList";
+import Text from "../atoms/Text";
 
 const Container = styled.div`
     min-height: 100vh;
@@ -14,22 +15,26 @@ const Container = styled.div`
 
 const ContentContainer = styled.div`
     min-height: 100%;
-    max-width: 1444px;
+    width: 1444px;
+
+    @media (max-width: 767.98px){
+    	width: 500px;
+    }
+
+    border: 1px solid red;
 `;
 
-function HomeTemplate({}) {
+function HomeTemplate({ courses }) {
     return (
         <Container>
             <ContentContainer>
                 <Header className="header" />
                 <div>
-                    <h2>Seus Cursos</h2>
-                    <div className="filters">
-                        
-                    </div>
+                    <Text type="medium" text={courses.length > 0 ? "Seus Cursos" : "Voce nao tem Cursos"}/>
+                    <div className="filters"></div>
                 </div>
                 <main className="main">
-                    <CourseCardList />
+                    <CourseCardList courses={courses} />
                 </main>
                 <footer className="footer">
                     <p>Desenvolvido por Jonas Felix de Souza</p>

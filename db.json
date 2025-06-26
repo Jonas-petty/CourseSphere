@@ -11,7 +11,7 @@
     {
       "id": "88d3",
       "name": "Curso de Matematica",
-      "description": "Curso para as aulas de matematica",
+      "description": "Curso para as aulas de matematica agora editado",
       "start_date": "2025-06-25",
       "end_date": "2025-06-28",
       "creator_id": "4568",
@@ -19,6 +19,20 @@
         "Flávio Pereira",
         "Frederica Gonçalves",
         "Ticiana Ribeiro"
+      ]
+    },
+    {
+      "id": "f53a",
+      "name": "Aulas de Violao v2",
+      "description": "Aulas de violao para a turma da igreja",
+      "start_date": "2025-06-27",
+      "end_date": "2025-06-30",
+      "creator_id": "",
+      "instructors": [
+        "Elóides Oliveira",
+        "Nerci Caldeira",
+        "Liliam Freitas",
+        "Francisca Ferreira"
       ]
     }
   ],
