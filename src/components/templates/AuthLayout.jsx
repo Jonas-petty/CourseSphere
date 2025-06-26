@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import Header from "../atoms/Text";
 
 const Container = styled.div`
     height: 100vh;
@@ -41,7 +40,6 @@ function AuthLayout({ headerText, headerType = "default", children }) {
     return (
         <Container>
             <Content>
-                <Header text={headerText} type={headerType} />
             </Content>
             <FormContainer>{children}</FormContainer>
         </Container>
