@@ -20,7 +20,7 @@ const HeaderStyled = styled.header`
 function Header() {
     return (
         <HeaderStyled>
-            <Text />
+            <Text text="CourseSphere"/>
             <LinkTo to="/create/course" text="+ Criar Novo Curso" type="button"/>
         </HeaderStyled>
     );

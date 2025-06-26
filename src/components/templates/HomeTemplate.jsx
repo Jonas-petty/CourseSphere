@@ -11,14 +11,16 @@ const Container = styled.div`
 
     display: flex;
     justify-content: center;
+    overflow-y: auto;
+    overflow-x: hidden;
 `;
 
 const ContentContainer = styled.div`
     min-height: 100%;
     width: 1444px;
 
-    @media (max-width: 767.98px){
-    	width: 500px;
+    @media (max-width: 767.98px) {
+        width: 500px;
     }
 `;
 
@@ -28,7 +30,14 @@ function HomeTemplate({ courses }) {
             <ContentContainer>
                 <Header className="header" />
                 <div>
-                    <Text type="medium" text={courses.length > 0 ? "Seus Cursos" : "Voce nao tem Cursos"}/>
+                    <Text
+                        type="medium"
+                        text={
+                            courses.length > 0
+                                ? "Seus Cursos"
+                                : "Voce nao tem Cursos"
+                        }
+                    />
                     <div className="filters"></div>
                 </div>
                 <main className="main">
