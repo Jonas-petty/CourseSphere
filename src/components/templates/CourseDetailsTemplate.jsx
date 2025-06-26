@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import Text from "../atoms/Text";
 import LinkTo from "../atoms/LinkTo";
+import LessonCard from "../molecules/LessonCard";
 
 const Container = styled.div`
     height: 100vh;
@@ -55,7 +56,11 @@ const Instructor = styled.span`
     border-radius: 1rem;
 `;
 
-const LessonsList = styled.div``;
+const LessonsList = styled.div`
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+`;
 
 function CourseDetailsTemplate({
     name = "Course Title",
@@ -95,9 +100,22 @@ function CourseDetailsTemplate({
                     />
                     <div>filter goes here</div>
                 </Header>
-                <hr />
                 <LessonsList>
-                    
+                    {lessons.length === 0 ? (
+                        <div>Sem aulas nesse curso</div>
+                    ) : (
+                        lessons.map((lesson) => {
+                            return (
+                                <LessonCard
+                                    key={lesson.id}
+                                    title={lesson.title}
+                                    publish_date={lesson.publish_date}
+                                    status={lesson.status}
+                                    video_url={lesson.video_url}
+                                />
+                            );
+                        })
+                    )}
                 </LessonsList>
             </ContentContainer>
         </Container>

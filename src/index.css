@@ -6,6 +6,7 @@
   box-sizing: border-box;
   font-family: "Noto Sans", sans-serif;
   color: var(--Neutral_900);
+  transition: 0.2s;
 }
 
 :root {

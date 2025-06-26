@@ -5,7 +5,7 @@ import LabeledTextarea from "../molecules/LabeledTextarea";
 import DropDown from "../atoms/DropDown";
 import LabeledDatePicker from "../molecules/LabeledDatePicker";
 import Button from "../atoms/Button";
-import { useParams } from "react-router";
+import { useNavigate, useParams } from "react-router";
 
 const Container = styled.div`
     height: 100vh;
@@ -29,6 +29,7 @@ const Form = styled.form`
 `;
 
 function LessonFormLayout({ isNewLesson, lesson, setLesson, options }) {
+    const navigate = useNavigate();
     const { courseId } = useParams();
 
     function getCurrentDate() {
@@ -52,6 +53,8 @@ function LessonFormLayout({ isNewLesson, lesson, setLesson, options }) {
         fetch("http://localhost:3000/lessons", {
             method: "POST",
             body: JSON.stringify(lessonData),
+        }).then((response) => {
+            navigate(`/course/${courseId}`);
         });
     }
 

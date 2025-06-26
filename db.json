@@ -59,6 +59,33 @@
       "video_url": "https://www.youtube.com/watch?v=3AXZ9Iahvc4",
       "course_id": "88d3",
       "creator_id": "4568"
+    },
+    {
+      "id": "71d8",
+      "title": "Matematica com ferreto",
+      "status": "draft",
+      "publish_date": "2025-06-28",
+      "video_url": "https://www.youtube.com/watch?v=Zw6z8fEskUI",
+      "course_id": "88d3",
+      "creator_id": "4568"
+    },
+    {
+      "id": "9120",
+      "title": "Raiz quadrada",
+      "status": "archived",
+      "publish_date": "2025-06-30",
+      "video_url": "https://www.youtube.com/watch?v=66mfBcJXBfo",
+      "course_id": "88d3",
+      "creator_id": "4568"
+    },
+    {
+      "id": "5a88",
+      "title": "Raiz quadrada",
+      "status": "published",
+      "publish_date": "2025-07-04",
+      "video_url": "https://www.youtube.com/watch?v=66mfBcJXBfo",
+      "course_id": "88d3",
+      "creator_id": "4568"
     }
   ]
 }
