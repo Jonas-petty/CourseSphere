@@ -1,4 +1,4 @@
-# CourseSphere# CourseSphere
+# CourseSphere
 
 [![Node.js](https://img.shields.io/badge/Node.js-%3E=18.x-green?logo=node.js)](https://nodejs.org/)  
 [![React](https://img.shields.io/badge/React-18.x-blue?logo=react)](https://react.dev/)
