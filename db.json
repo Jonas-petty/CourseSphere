@@ -50,5 +50,15 @@
       ]
     }
   ],
-  "lessons": []
+  "lessons": [
+    {
+      "id": "a7f2",
+      "title": "fdfdfdfd",
+      "status": "archived",
+      "publish_date": "2025-07-02",
+      "video_url": "https://www.youtube.com/watch?v=3AXZ9Iahvc4",
+      "course_id": "88d3",
+      "creator_id": "4568"
+    }
+  ]
 }

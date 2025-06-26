@@ -40,7 +40,7 @@ function CreateCourseTemplate({
     const navigate = useNavigate();
 
     function handleChange(field, value) {
-        if (field == "instructors") {
+        if (field === "instructors") {
             value = value.map((instructor) => instructor.value);
         }
 

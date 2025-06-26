@@ -9,6 +9,7 @@ import NotFoundPage from './components/pages/NotFoundPage.jsx'
 import CourseDetailsPage from './components/pages/CourseDetailsPage.jsx'
 import CreateCoursePage from './components/pages/CreateCoursePage.jsx'
 import EditCoursePage from './components/pages/EditCoursePage.jsx'
+import CreateLessonPage from './components/pages/CreateLessonPage.jsx'
 
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
             <Route path='/' index element={<HomePage />} />
             <Route path='/course/:courseId' element={<CourseDetailsPage />} />
             <Route path='create/course' element={<CreateCoursePage />}/>
+            <Route path='/course/:courseId/create/lesson' element={<CreateLessonPage />} />
             <Route path='/course/:courseId/edit' element={<EditCoursePage />}/>
         </Route>
       </Routes>
