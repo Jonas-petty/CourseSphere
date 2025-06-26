@@ -20,8 +20,6 @@ const ContentContainer = styled.div`
     @media (max-width: 767.98px){
     	width: 500px;
     }
-
-    border: 1px solid red;
 `;
 
 function HomeTemplate({ courses }) {

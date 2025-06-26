@@ -34,6 +34,20 @@
         "Liliam Freitas",
         "Francisca Ferreira"
       ]
+    },
+    {
+      "id": "2509",
+      "name": "Leitura de Ingles",
+      "description": "Leitura dos livros americanos",
+      "start_date": "2025-07-05",
+      "end_date": "2025-07-23",
+      "creator_id": "",
+      "instructors": [
+        "Luciara Sales",
+        "Omar Sales",
+        "Quênia Castro",
+        "Nelson Gomes"
+      ]
     }
   ],
   "lessons": []
