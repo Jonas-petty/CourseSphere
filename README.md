@@ -1,6 +1,5 @@
 # CourseSphere# CourseSphere
 
-[![Node.js](https://img.shields.io/badge/Node.js-%3E=18.x-green?logo=node.js)](https://nodejs.org/) 
 [![Node.js](https://img.shields.io/badge/Node.js-%3E=18.x-green?logo=node.js)](https://nodejs.org/)   
 [![Vite](https://img.shields.io/badge/Bundler-Vite-purple?logo=vite)](https://vitejs.dev/)  
 
