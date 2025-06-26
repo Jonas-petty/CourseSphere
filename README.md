@@ -9,6 +9,8 @@
 
 ---
 
+> **Atenção!** O deploy ainda não esta com o mock back-end (json-server) no ar, irei adicionar o mais rápido possível. Sinta-se a vontade para verificar o sistemas localmente no meio tempo.
+
 ## Índice
 
 1. [Funcionalidades](#funcionalidades)
